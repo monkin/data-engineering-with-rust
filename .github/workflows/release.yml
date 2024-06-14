@@ -14,6 +14,6 @@ jobs:
           profile: minimal
           components: clippy, rustfmt
           override: true
-      - name: Run clippy
+      - name: Run build
         run: cargo build --release
   

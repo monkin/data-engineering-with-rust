@@ -14,5 +14,5 @@ jobs:
           profile: minimal
           components: clippy, rustfmt
           override: true
-      - name: Run rustfmt
+      - name: Run rust fmt
         run: cargo fmt --check
