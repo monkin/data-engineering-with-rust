@@ -6,6 +6,6 @@
 ![Tests Status](https://github.com/monkin/data-engineering-with-rust/actions/workflows/tests.yml/badge.svg)
 ![GitHub Pages Status](https://github.com/monkin/data-engineering-with-rust/actions/workflows/static.yml/badge.svg)
 
-Labs documentation: https://monkin.github.io/data-engineering-with-rust/
+Labs list and documentation: https://monkin.github.io/data-engineering-with-rust/
 
 The course: https://www.coursera.org/learn/data-engineering-rust
