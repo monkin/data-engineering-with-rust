@@ -1,16 +1,14 @@
+/*
+ * Usage: word-count --file <FILE_NAME>
+ *
+ * Options:
+ *     -f, --file <FILE_NAME>  Path to the file to be processed
+ *     -h, --help              Print help
+ *     -V, --version           Print version
+*/
 use clap::Parser;
-use std::collections::HashMap;
 
-/// Returns a map of words and their counts in the input string
-fn get_words_count_map(input: &str) -> HashMap<&str, u32> {
-    input
-        .split(|char| !('a'..='z').contains(&char) && !('A'..='Z').contains(&char))
-        .filter(|word| !word.is_empty())
-        .fold(HashMap::new(), |mut map, word| {
-            *map.entry(word).or_insert(0) += 1;
-            map
-        })
-}
+mod words_count;
 
 #[derive(Parser, Debug)]
 #[clap(
@@ -30,7 +28,7 @@ fn main() {
 
     match std::fs::read_to_string(&file_name) {
         Ok(content) => {
-            let count_map = get_words_count_map(&content);
+            let count_map = words_count::get_words_count_map(&content);
             for (word, count) in count_map {
                 println!("{}: {}", word, count);
             }
