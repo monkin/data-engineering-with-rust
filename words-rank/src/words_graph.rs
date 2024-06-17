@@ -64,7 +64,7 @@ impl<'a> WordsGraph<'a> {
         words_graph
     }
 
-    // Collects the important words from the graph using page rank algorithm
+    /// Collects the important words from the graph using page rank algorithm
     pub fn get_important_words(&self, words_count: usize) -> Vec<(&'a str, f32)> {
         let ranks = page_rank(
             &self.graph,

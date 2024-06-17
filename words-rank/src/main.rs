@@ -18,10 +18,10 @@ struct CliArguments {
     file_name: Option<String>,
     #[clap(short, long)]
     url: Option<String>,
-    // Minimum word length in characters
+    /// Minimum word length in characters
     #[clap(short = 'w', long, default_value_t = 4usize)]
     min_word_length: usize,
-    // Minimum sentence length in words
+    /// Minimum sentence length in words
     #[clap(short = 's', long, default_value_t = 3usize)]
     min_sentence_length: usize,
     #[clap(short, long, default_value_t = 10usize)]
