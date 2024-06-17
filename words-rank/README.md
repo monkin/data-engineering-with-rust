@@ -9,8 +9,8 @@ Usage: words-rank.exe [OPTIONS]
 Options:
   -f, --file <FILE_NAME>                           Path to the file to be processed
   -u, --url <URL>
-  -w, --min-word-length <MIN_WORD_LENGTH>          [default: 4]
-  -s, --min-sentence-length <MIN_SENTENCE_LENGTH>  [default: 3]
+  -w, --min-word-length <MIN_WORD_LENGTH>          Minimum word length in characters [default: 4]
+  -s, --min-sentence-length <MIN_SENTENCE_LENGTH>  Minimum sentence length in words [default: 3]
   -w, --words-count <WORDS_COUNT>                  [default: 10]
   -h, --help                                       Print help
   -V, --version                                    Print version
