@@ -3,7 +3,7 @@ use std::collections::HashMap;
 /// Returns a map of words and their counts in the input string
 pub fn get_words_count_map(input: &str) -> HashMap<&str, u32> {
     input
-        .split(|char| !('a'..='z').contains(&char) && !('A'..='Z').contains(&char))
+        .split(|char: char| !char.is_alphabetic())
         .filter(|word| !word.is_empty())
         .fold(HashMap::new(), |mut map, word| {
             *map.entry(word).or_insert(0) += 1;

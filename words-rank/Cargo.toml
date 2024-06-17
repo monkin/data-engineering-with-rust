@@ -1,0 +1,11 @@
+[package]
+name = "words-rank"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+petgraph = "0.6.5"
+clap = { version = "4.5.7", features = ["derive"] }
+bumpalo = "3.16.0"
+reqwest = { version = "0.12.4", features = ["blocking"] }
+ascii_table = "4.0.3"
